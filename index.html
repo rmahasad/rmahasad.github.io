@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>国精一二产区无人区 | 极境影像记录 - 荒野视频品牌</title>
+<meta name="description" content="国精一二产区无人区官方视频品牌站，以极境影像记录荒野与无人之境，提供纪录片、航拍大片、创作者扶持与社区放映，用镜头连接人与远方。">
+<style>
+  :root{
+    --bg:#0b0d0c;
+    --bg-2:#111512;
+    --bg-3:#161c18;
+    --line:#26302a;
+    --ink:#e8ece8;
+    --ink-2:#a9b4ac;
+    --ink-3:#6f7d74;
+    --accent:#c9f24d;
+    --accent-2:#8fd6a4;
+    --warm:#e8b96a;
+    --radius:16px;
+    --max:1180px;
+    --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font);
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  ul,ol{list-style:none}
+  ::selection{background:var(--accent);color:#0b0d0c}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  /* ---------- 顶部导航 ---------- */
+  header.site{
+    position:sticky;top:0;z-index:80;
+    background:rgba(11,13,12,.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:var(--max);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;gap:28px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:.5px;white-space:nowrap}
+  .brand .dot{
+    width:26px;height:26px;border-radius:50%;
+    background:conic-gradient(from 210deg,var(--accent),var(--accent-2),#3b6b52,var(--accent));
+    box-shadow:0 0 0 3px rgba(201,242,77,.12);
+  }
+  .brand small{display:block;font-weight:400;font-size:11px;color:var(--ink-3);letter-spacing:2px}
+  nav.links{display:flex;gap:6px;margin-left:12px;flex-wrap:wrap}
+  nav.links a{
+    padding:8px 12px;border-radius:999px;color:var(--ink-2);font-size:14px;
+    transition:.25s;
+  }
+  nav.links a:hover{color:var(--ink);background:var(--bg-3)}
+  .nav-cta{margin-left:auto;display:flex;align-items:center;gap:12px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:11px 22px;border-radius:999px;font-size:14px;font-weight:600;
+    border:1px solid transparent;cursor:pointer;transition:.25s;white-space:nowrap;
+  }
+  .btn.primary{background:var(--accent);color:#101408}
+  .btn.primary:hover{background:#d8ff66;transform:translateY(-2px)}
+  .btn.ghost{border-color:var(--line);color:var(--ink-2)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:8px 12px;font-size:16px}
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:70px 0 40px;
+    background:
+      radial-gradient(1100px 500px at 80% -10%,rgba(143,214,164,.14),transparent 60%),
+      radial-gradient(900px 480px at 0% 20%,rgba(201,242,77,.08),transparent 55%),
+      var(--bg);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;opacity:.14;pointer-events:none;
+    mask-image:radial-gradient(circle at 50% 20%,#000,transparent 72%);
+    -webkit-mask-image:radial-gradient(circle at 50% 20%,#000,transparent 72%);
+  }
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:3px;color:var(--accent-2);
+    border:1px solid rgba(143,214,164,.35);border-radius:999px;padding:6px 14px;
+    margin-bottom:22px;text-transform:uppercase;
+  }
+  .eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--accent);display:block;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+  h1{
+    font-size:clamp(38px,6vw,74px);
+    line-height:1.05;letter-spacing:-1px;font-weight:900;
+    margin-bottom:20px;
+  }
+  h1 .grad{
+    background:linear-gradient(100deg,var(--accent) 10%,var(--accent-2) 55%,var(--warm) 95%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lead{color:var(--ink-2);font-size:17px;max-width:540px;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
+  .stats{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
+  .stats div strong{display:block;font-size:26px;font-weight:800;color:var(--accent)}
+  .stats div span{font-size:13px;color:var(--ink-3);letter-spacing:1px}
+
+  .hero-visual{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0f1512}
+  .hero-visual svg{width:100%;height:100%}
+  .hero-visual .badge{
+    position:absolute;left:16px;bottom:16px;right:16px;
+    display:flex;align-items:center;gap:10px;
+    background:rgba(11,13,12,.72);backdrop-filter:blur(8px);
+    border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--ink-2);
+  }
+  .hero-visual .badge b{color:var(--accent);font-size:13px}
+  .rec{width:9px;height:9px;border-radius:50%;background:#ff5c5c;animation:pulse 1.4s infinite;flex:none}
+
+  /* ---------- 跑马灯 ---------- */
+  .marquee{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--bg-2);overflow:hidden;padding:16px 0;
+  }
+  .marquee-track{display:flex;gap:48px;width:max-content;animation:scroll 38s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-track span{font-size:14px;color:var(--ink-3);letter-spacing:2px;display:flex;align-items:center;gap:48px;white-space:nowrap}
+  .marquee-track span::after{content:"◆";color:var(--accent);font-size:9px}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:88px 0;position:relative}
+  .sec-head{max-width:720px;margin-bottom:48px}
+  .sec-head .tag{font-size:12px;letter-spacing:3px;color:var(--accent);text-transform:uppercase;display:block;margin-bottom:14px}
+  .sec-head h2{font-size:clamp(26px,3.6vw,40px);line-height:1.2;font-weight:800;letter-spacing:-.5px;margin-bottom:16px}
+  .sec-head p{color:var(--ink-2);font-size:15.5px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+  /* ---------- 品牌主张 ---------- */
+  .about{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .about-copy p{color:var(--ink-2);margin-bottom:18px;font-size:15.5px}
+  .about-copy p strong{color:var(--ink);font-weight:700}
+  .pillars{display:grid;gap:16px;margin-top:28px}
+  .pillar{
+    display:grid;grid-template-columns:44px 1fr;gap:16px;padding:18px;
+    border:1px solid var(--line);border-radius:12px;background:var(--bg);
+    transition:.3s;
+  }
+  .pillar:hover{border-color:rgba(201,242,77,.4);transform:translateX(4px)}
+  .pillar .num{font-size:13px;font-weight:800;color:var(--accent);border:1px solid rgba(201,242,77,.35);border-radius:8px;height:32px;display:flex;align-items:center;justify-content:center}
+  .pillar h4{font-size:15px;margin-bottom:4px}
+  .pillar p{font-size:13.5px;color:var(--ink-3);margin:0;line-height:1.6}
+  .about-art{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#0f1512;position:sticky;top:96px}
+  .about-art svg{width:100%;height:auto}
+
+  /* ---------- 节目矩阵 ---------- */
+  .shows{background:var(--bg)}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+  .filters button{
+    padding:8px 18px;border-radius:999px;background:transparent;color:var(--ink-2);
+    border:1px solid var(--line);cursor:pointer;font-size:13.5px;transition:.25s;font-family:inherit;
+  }
+  .filters button:hover{color:var(--ink);border-color:var(--ink-3)}
+  .filters button.on{background:var(--accent);color:#101408;border-color:var(--accent);font-weight:700}
+  .show-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    background:var(--bg-2);transition:.35s;display:flex;flex-direction:column;
+  }
+  .card:hover{transform:translateY(-6px);border-color:rgba(201,242,77,.3);box-shadow:0 24px 48px -28px rgba(0,0,0,.9)}
+  .card .thumb{aspect-ratio:16/10;background:#0d1310;position:relative;overflow:hidden}
+  .card .thumb svg{width:100%;height:100%;transition:.5s}
+  .card:hover .thumb svg{transform:scale(1.05)}
+  .card .thumb .ep{
+    position:absolute;top:12px;left:12px;font-size:11px;font-weight:700;letter-spacing:1px;
+    background:rgba(11,13,12,.75);border:1px solid var(--line);border-radius:6px;padding:4px 9px;color:var(--accent-2);
+  }
+  .card .thumb .dur{
+    position:absolute;bottom:12px;right:12px;font-size:11px;color:var(--ink);background:rgba(11,13,12,.8);
+    padding:3px 8px;border-radius:6px;letter-spacing:.5px;
+  }
+  .card .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card .body h3{font-size:17px;font-weight:700;line-height:1.4}
+  .card .body p{font-size:13.5px;color:var(--ink-3);line-height:1.65;flex:1}
+  .card .meta{display:flex;gap:14px;font-size:12px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+  .card .meta span{display:flex;align-items:center;gap:5px}
+  .hidden{display:none !important}
+
+  /* ---------- 数据区 ---------- */
+  .numbers{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .num-cell{background:var(--bg);padding:34px 26px;text-align:center}
+  .num-cell strong{display:block;font-size:clamp(28px,4vw,44px);font-weight:900;color:var(--accent);letter-spacing:-1px;margin-bottom:6px;font-variant-numeric:tabular-nums}
+  .num-cell span{font-size:13.5px;color:var(--ink-3);letter-spacing:1px}
+
+  /* ---------- 时间线 ---------- */
+  .timeline{background:var(--bg)}
+  .tl{position:relative;padding-left:30px}
+  .tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--accent-2),transparent)}
+  .tl-item{position:relative;padding:0 0 36px 22px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-29px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .tl-item time{font-size:12px;letter-spacing:2px;color:var(--accent-2);font-weight:700}
+  .tl-item h4{font-size:16.5px;margin:6px 0 8px;font-weight:700}
+  .tl-item p{font-size:14px;color:var(--ink-3);line-height:1.75}
+
+  /* ---------- 创作者 ---------- */
+  .creators{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .creator{
+    border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;background:var(--bg);
+    display:flex;flex-direction:column;gap:12px;transition:.3s;text-align:center;
+  }
+  .creator:hover{border-color:rgba(201,242,77,.35);transform:translateY(-4px)}
+  .avatar{
+    width:64px;height:64px;border-radius:50%;margin:0 auto;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;
+    color:#101408;letter-spacing:-1px;
+  }
+  .creator h4{font-size:15.5px;font-weight:700}
+  .creator .role{font-size:12px;color:var(--accent-2);letter-spacing:1px}
+  .creator p{font-size:13px;color:var(--ink-3);line-height:1.65}
+  .creator .stat{font-size:12px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+  .creator .stat b{color:var(--accent)}
+
+  /* ---------- 社区放映 ---------- */
+  .screenings{background:var(--bg)}
+  .screen-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:start}
+  .screen-list{display:flex;flex-direction:column;gap:14px}
+  .screen-item{
+    display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;
+    border:1px solid var(--line);border-radius:12px;padding:18px 22px;background:var(--bg-2);transition:.25s;
+  }
+  .screen-item:hover{border-color:rgba(201,242,77,.35);background:var(--bg-3)}
+  .screen-item .date{text-align:center;min-width:64px}
+  .screen-item .date b{display:block;font-size:22px;color:var(--accent);line-height:1.1;font-weight:900}
+  .screen-item .date span{font-size:11px;color:var(--ink-3);letter-spacing:1px}
+  .screen-item h4{font-size:15.5px;margin-bottom:4px}
+  .screen-item p{font-size:12.5px;color:var(--ink-3)}
+  .screen-item .place{font-size:12px;color:var(--accent-2);border:1px solid rgba(143,214,164,.3);border-radius:999px;padding:5px 12px;white-space:nowrap}
+  .side-card{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:linear-gradient(160deg,var(--bg-3),var(--bg-2));position:sticky;top:96px}
+  .side-card h4{font-size:16px;margin-bottom:12px}
+  .side-card p{font-size:13.5px;color:var(--ink-3);margin-bottom:20px;line-height:1.7}
+  .side-card form{display:flex;flex-direction:column;gap:10px}
+  .side-card input{
+    width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);
+    background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;outline:none;transition:.2s;
+  }
+  .side-card input:focus{border-color:var(--accent)}
+  .side-card .msg{font-size:12.5px;color:var(--accent-2);min-height:18px;margin-top:6px}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+  .faq-item{border:1px solid var(--line);border-radius:12px;background:var(--bg);overflow:hidden}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;color:var(--ink);font-family:inherit;
+    padding:20px 22px;font-size:15px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;
+  }
+  .faq-q .ico{color:var(--accent);font-size:18px;transition:.3s;flex:none}
+  .faq-item.open .faq-q .ico{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .faq-a p{padding:0 22px 20px;font-size:14px;color:var(--ink-3);line-height:1.8}
+  .faq-item.open .faq-a{max-height:280px}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    background:linear-gradient(135deg,rgba(201,242,77,.1),rgba(143,214,164,.05)),var(--bg);
+    border-top:1px solid var(--line);text-align:center;padding:96px 0;
+  }
+  .cta h2{font-size:clamp(26px,4vw,42px);font-weight:900;letter-spacing:-.5px;margin-bottom:16px;line-height:1.2}
+  .cta p{color:var(--ink-2);max-width:560px;margin:0 auto 32px;font-size:15.5px}
+  .cta .hero-actions{justify-content:center}
+
+  /* ---------- 页脚 ---------- */
+  footer.site{background:#080a09;border-top:1px solid var(--line);padding:60px 0 30px;font-size:14px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+  .foot-brand .brand{margin-bottom:16px}
+  .foot-brand p{color:var(--ink-3);font-size:13.5px;line-height:1.8;max-width:300px}
+  .foot-col h5{font-size:13px;color:var(--ink);letter-spacing:1px;margin-bottom:16px;font-weight:700}
+  .foot-col a{display:block;color:var(--ink-3);font-size:13.5px;margin-bottom:10px;transition:.2s}
+  .foot-col a:hover{color:var(--accent)}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--ink-3);font-size:12.5px}
+  .socials{display:flex;gap:10px}
+  .socials a{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink-3);font-size:12px;transition:.2s}
+  .socials a:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* ---------- 响应式 ---------- */
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .hero-visual{max-width:440px}
+    .about-grid{grid-template-columns:1fr;gap:36px}
+    .about-art{position:static}
+    .show-grid{grid-template-columns:repeat(2,1fr)}
+    .num-grid{grid-template-columns:repeat(2,1fr)}
+    .creator-grid{grid-template-columns:repeat(2,1fr)}
+    .screen-grid{grid-template-columns:1fr}
+    .side-card{position:static}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:680px){
+    section{padding:64px 0}
+    nav.links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--line);flex-direction:column;padding:14px 24px;gap:2px}
+    nav.links.open{display:flex}
+    .menu-toggle{display:block}
+    .nav-cta .btn.ghost{display:none}
+    .show-grid{grid-template-columns:1fr}
+    .creator-grid{grid-template-columns:1fr}
+    .num-grid{grid-template-columns:1fr}
+    .stats{gap:24px}
+    .foot-grid{grid-template-columns:1fr;gap:30px}
+    .screen-item{grid-template-columns:auto 1fr;gap:14px}
+    .screen-item .place{grid-column:2;justify-self:start}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="#top">
+      <span class="dot"></span>
+      <span>国精一二产区无人区<small>WILDERNESS PICTURES</small></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#about">品牌主张</a>
+      <a href="#shows">节目矩阵</a>
+      <a href="#timeline">影像历程</a>
+      <a href="#creators">创作者</a>
+      <a href="#screenings">社区放映</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn ghost" href="#screenings">加入社群</a>
+      <a class="btn primary" href="#shows">观看首映</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="打开菜单">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= 首屏 ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><i></i>极境影像 · 荒野叙事 · 无人区现场</span>
+        <h1>国精一二产区<br><span class="grad">无人区</span></h1>
+        <p class="lead">我们把摄像机带进地图上没有名字的地方。国精一二产区无人区是一支专注荒野与极境记录的影像团队，用长镜头、航拍与现场声场，把无人区里那些被风沙掩埋的故事，带回有信号的屏幕前。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#shows">开始观看 →</a>
+          <a class="btn ghost" href="#about">了解我们的拍摄方式</a>
+        </div>
+        <div class="stats">
+          <div><strong>186</strong><span>荒野战</span></div>
+          <div><strong>42</strong><span>无人区勘景</span></div>
+          <div><strong>9.1亿</strong><span>全平台播放</span></div>
+          <div><strong>26万</strong><span>社区成员</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 480 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="无人区荒野山脊与星空插画">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0c1410"/>
+              <stop offset="50%" stop-color="#132019"/>
+              <stop offset="100%" stop-color="#1c2a20"/>
+            </linearGradient>
+            <linearGradient id="mt1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#28402f"/>
+              <stop offset="100%" stop-color="#101a14"/>
+            </linearGradient>
+            <linearGradient id="mt2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1a2a20"/>
+              <stop offset="100%" stop-color="#0a100c"/>
+            </linearGradient>
+            <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+              <stop offset="0" stop-color="#c9f24d" stop-opacity=".5"/>
+              <stop offset="60%" stop-color="#8fd6a4" stop-opacity=".1"/>
+              <stop offset="100%" stop-color="#8fd6a4" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="480" height="600" fill="url(#sky)"/>
+          <circle cx="240" cy="250" r="220" fill="url(#glow)"/>
+          <circle cx="300" cy="170" r="42" fill="#e8f6c9" opacity=".92"/>
+          <circle cx="300" cy="170" r="66" fill="#c9f24d" opacity=".07"/>
+          <g fill="#cfe6d4">
+            <circle cx="70" cy="90" r="1.6" opacity=".8"/>
+            <circle cx="120" cy="60" r="1.1" opacity=".5"/>
+            <circle cx="190" cy="110" r="1.4" opacity=".7"/>
+            <circle cx="380" cy="70" r="1.7" opacity=".8"/>
+            <circle cx="420" cy="130" r="1.2" opacity=".55"/>
+            <circle cx="50" cy="190" r="1.3" opacity=".6"/>
+            <circle cx="150" cy="160" r="1" opacity=".45"/>
+            <circle cx="430" cy="220" r="1.5" opacity=".7"/>
+            <circle cx="250" cy="50" r="1.2" opacity=".6"/>
+            <circle cx="330" cy="240" r="1" opacity=".4"/>
+            <circle cx="90" cy="260" r="1.4" opacity=".5"/>
+            <circle cx="410" cy="300" r="1.1" opacity=".45"/>
+          </g>
+          <path d="M0 400 L70 330 L130 372 L200 300 L270 366 L340 318 L410 372 L480 330 L480 600 L0 600Z" fill="url(#mt1)"/>
+          <path d="M0 470 L80 410 L150 452 L230 392 L310 452 L390 410 L480 460 L480 600 L0 600Z" fill="url(#mt2)"/>
+          <path d="M0 540 L90 500 L180 528 L270 492 L360 528 L450 498 L480 512 L480 600 L0 600Z" fill="#080d0a"/>
+          <g stroke="#c9f24d" stroke-width="1.4" opacity=".55" fill="none">
+            <path d="M155 300 L200 300 L200 366 L270 366"/>
+            <circle cx="200" cy="300" r="3" fill="#c9f24d"/>
+            <circle cx="270" cy="366" r="3" fill="#c9f24d"/>
+          </g>
+          <g opacity=".85">
+            <rect x="196" y="430" width="6" height="46" fill="#0a0f0c"/>
+            <rect x="186" y="452" width="26" height="4" fill="#0a0f0c"/>
+            <circle cx="199" cy="422" r="7" fill="#c9f24d" opacity=".9"/>
+            <circle cx="199" cy="422" r="13" fill="#c9f24d" opacity=".15"/>
+          </g>
+        </svg>
+        <div class="badge"><span class="rec"></span><b>NOW REC</b><span>无人区 · 第七季 现场勘景中</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 跑马灯 ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>极境影像</span><span>无人区纪录</span><span>4K 航拍</span><span>野外声场</span><span>长镜头叙事</span><span>社区放映</span><span>创作者扶持</span>
+      <span>极境影像</span><span>无人区纪录</span><span>4K 航拍</span><span>野外声场</span><span>长镜头叙事</span><span>社区放映</span><span>创作者扶持</span>
+    </div>
+  </div>
+
+  <!-- ================= 品牌主张 ================= -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Brand Manifesto / 品牌主张</span>
+        <h2>在信号之外，记录真实的中国荒野</h2>
+        <p>国精一二产区无人区不追逐奇观，我们相信荒野本身就足够动人。团队由纪录片导演、自然摄影师、地理学者与声音设计师组成，常年驻扎在高原、戈壁与峡谷，用可持续的方式拍摄不被打扰的风景。</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p><strong>我们为什么出发。</strong>无人区意味着没有路、没有补给、没有网络，也意味着没有人替这些地方发声。国精一二产区无人区把这些区域作为长期拍摄样本，用十年尺度建立影像档案，让后来者能看见它们原本的样子。</p>
+          <p><strong>我们如何拍摄。</strong>尊重是取景的前提。团队遵守最小干扰原则，不驱赶、不投喂、不摆拍野生动物，所有航拍都在合规空域内完成。我们宁可少一个镜头，也不愿多一次打扰。</p>
+          <p><strong>我们想把镜头交给谁。</strong>交给懂荒野的人，也交给第一次看见荒野的人。国精一二产区无人区相信，好的纪录影像不是说明书，而是一封邀请函。</p>
+          <div class="pillars">
+            <div class="pillar">
+              <span class="num">01</span>
+              <div><h4>最小干扰原则</h4><p>拍摄行为不得超过自然可承受的边界，这是我们所有项目的第一条铁律。</p></div>
+            </div>
+            <div class="pillar">
+              <span class="num">02</span>
+              <div><h4>长周期观察</h4><p>一个地点至少跨三个季节回访，用时间换取真实的季节叙事。</p></div>
+            </div>
+            <div class="pillar">
+              <span class="num">03</span>
+              <div><h4>知识共建</h4><p>与科研机构共享影像资料，让镜头成为研究的一部分。</p></div>
+            </div>
+            <div class="pillar">
+              <span class="num">04</span>
+              <div><h4>社区回响</h4><p>每部作品完成后回到城市做免费放映，把荒野带回人群。</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-art">
+          <svg viewBox="0 0 520 620" role="img" aria-label="无人区营地与远山构图插画">
+            <defs>
+              <linearGradient id="ag1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#101a15"/>
+                <stop offset="100%" stop-color="#070b09"/>
+              </linearGradient>
+              <linearGradient id="ag2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#233a2b"/>
+                <stop offset="100%" stop-color="#0e1812"/>
+              </linearGradient>
+              <radialGradient id="ag3" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#e8b96a" stop-opacity=".55"/>
+                <stop offset="100%" stop-color="#e8b96a" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="520" height="620" fill="url(#ag1)"/>
+            <circle cx="260" cy="300" r="180" fill="url(#ag3)" opacity=".7"/>
+            <path d="M0 380 L90 300 L170 356 L260 268 L350 350 L440 288 L520 356 L520 620 L0 620Z" fill="url(#ag2)"/>
+            <path d="M0 470 L100 420 L200 466 L300 416 L400 466 L520 424 L520 620 L0 620Z" fill="#0a110d"/>
+            <path d="M0 560 L120 520 L240 556 L360 518 L520 552 L520 620 L0 620Z" fill="#050806"/>
+            <g fill="#0a0f0c">
+              <path d="M150 430 L200 380 L250 430 Z"/>
+              <path d="M245 430 L270 400 L295 430 Z"/>
+            </g>
+            <path d="M150 430 L200 380 L250 430 Z" fill="#c9f24d" opacity=".12"/>
+            <circle cx="300" cy="452" r="8" fill="#e8b96a"/>
+            <circle cx="300" cy="452" r="22" fill="#e8b96a" opacity=".12"/>
+            <g stroke="#8fd6a4" stroke-width="1.2" opacity=".5" fill="none">
+              <path d="M40 250 C120 220, 180 280, 260 250 S420 230, 480 260"/>
+            </g>
+            <g fill="#cfe6d4">
+              <circle cx="80" cy="120" r="1.4" opacity=".7"/>
+              <circle cx="170" cy="90" r="1" opacity=".5"/>
+              <circle cx="300" cy="110" r="1.5" opacity=".7"/>
+              <circle cx="400" cy="80" r="1.2" opacity=".6"/>
+              <circle cx="460" cy="160" r="1" opacity=".45"/>
+              <circle cx="120" cy="180" r="1.1" opacity=".5"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 节目矩阵 ================= -->
+  <section class="shows" id="shows">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Programming / 节目矩阵</span>
+        <h2>正在更新的无人区影像作品</h2>
+        <p>从长纪录片到短现场，从航拍诗篇到人物访谈，国精一二产区无人区把荒野拆成不同的观看入口。按类型筛选，找到你今晚想打开的那一部。</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="on" data-filter="all">全部</button>
+        <button data-filter="doc">纪录片</button>
+        <button data-filter="aerial">航拍</button>
+        <button data-filter="people">人物</button>
+        <button data-filter="live">现场</button>
+      </div>
+      <div class="show-grid" id="showGrid">
+
+        <article class="card" data-cat="doc">
+          <div class="thumb">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#101a14"/>
+              <path d="M0 170 L70 120 L140 160 L210 100 L290 158 L360 118 L400 150 L400 250 L0 250Z" fill="#1c2e22"/>
+              <path d="M0 210 L90 180 L180 206 L270 176 L400 204 L400 250 L0 250Z" fill="#0a100c"/>
+              <circle cx="300" cy="66" r="26" fill="#c9f24d" opacity=".85"/>
+              <circle cx="300" cy="66" r="46" fill="#c9f24d" opacity=".08"/>
+            </svg>
+            <span class="ep">EP.01</span><span class="dur">48:12</span>
+          </div>
+          <div class="body">
+            <h3>无人区纪事 · 走进风蚀带</h3>
+            <p>一支六人小队用二十一天横穿风蚀地貌带，记录岩层如何在风里缓慢改写地形。</p>
+            <div class="meta"><span>纪录片</span><span>★ 9.4</span><span>4K</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="aerial">
+          <div class="thumb">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#0d1712"/>
+              <path d="M0 140 Q100 90 200 140 T400 130 L400 250 L0 250Z" fill="#1e3326"/>
+              <path d="M0 190 Q120 150 240 192 T400 180 L400 250 L0 250Z" fill="#0b1310"/>
+              <path d="M0 224 Q140 200 280 226 T400 220 L400 250 L0 250Z" fill="#060a08"/>
+              <path d="M40 90 Q200 40 360 96" stroke="#8fd6a4" stroke-width="1" fill="none" opacity=".5" stroke-dasharray="5 6"/>
+              <circle cx="200" cy="62" r="4" fill="#8fd6a4"/>
+            </svg>
+            <span class="ep">AIR 04</span><span class="dur">12:40</span>
+          </div>
+          <div class="body">
+            <h3>天际线 · 从四百米看峡谷</h3>
+            <p>无人机沿峡谷主脊线飞行，一镜到底呈现无人区最完整的地貌剖面。</p>
+            <div class="meta"><span>航拍</span><span>★ 9.1</span><span>一镜到底</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="people">
+          <div class="thumb">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#121814"/>
+              <circle cx="200" cy="112" r="44" fill="#22372a"/>
+              <path d="M120 250 Q200 156 280 250 Z" fill="#1a2c21"/>
+              <circle cx="200" cy="106" r="30" fill="#2e4835"/>
+              <circle cx="200" cy="106" r="48" stroke="#c9f24d" stroke-width="1.2" fill="none" opacity=".4" stroke-dasharray="4 7"/>
+              <rect x="0" y="0" width="400" height="250" fill="url(#none)"/>
+            </svg>
+            <span class="ep">TALK 07</span><span class="dur">26:05</span>
+          </div>
+          <div class="body">
+            <h3>在无人区守了十年的人</h3>
+            <p>我们和一位自然保护站站长聊了聊：孤独、补给、以及他为什么一次次回到这里。</p>
+            <div class="meta"><span>人物</span><span>★ 9.6</span><span>访谈</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="live">
+          <div class="thumb">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#0b120e"/>
+              <g stroke="#8fd6a4" stroke-width="1.2" fill="none" opacity=".65">
+                <path d="M40 160 L90 160 L90 100 L140 100 L140 160 L190 160 L190 120 L240 120 L240 160 L290 160"/>
+              </g>
+              <g fill="#c9f24d">
+                <rect x="60" y="180" width="6" height="20"/>
+                <rect x="80" y="172" width="6" height="28"/>
+                <rect x="100" y="186" width="6" height="14"/>
+                <rect x="120" y="164" width="6" height="36"/>
+                <rect x="140" y="178" width="6" height="22"/>
+                <rect x="160" y="168" width="6" height="32"/>
+                <rect x="180" y="190" width="6" height="10"/>
+                <rect x="200" y="174" width="6" height="26"/>
+                <rect x="220" y="182" width="6" height="18"/>
+              </g>
+              <circle cx="320" cy="80" r="18" fill="#e8b96a" opacity=".8"/>
+            </svg>
+            <span class="ep">LIVE</span><span class="dur">58:30</span>
+          </div>
+          <div class="body">
+            <h3>荒野声场 · 无人区现场收音</h3>
+            <p>把耳朵交给风。一次没有解说、没有配乐的现场声音实验，适合深夜播放。</p>
+            <div class="meta"><span>现场</span><span>★ 9.0</span><span>沉浸声</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="doc">
+          <div class="thumb">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#0f1611"/>
+              <path d="M0 200 L60 150 L120 190 L180 130 L250 184 L320 140 L400 186 L400 250 L0 250Z" fill="#21382a"/>
+              <path d="M0 230 L110 206 L230 232 L340 208 L400 226 L400 250 L0 250Z" fill="#090f0b"/>
+              <g stroke="#c9f24d" stroke-width="1" opacity=".4" fill="none">
+                <path d="M30 80 L80 60 L130 90"/>
+                <path d="M270 70 L320 50 L370 84"/>
+              </g>
+            </svg>
+            <span class="ep">EP.05</span><span class="dur">52:00</span>
+          </div>
+          <div class="body">
+            <h3>水系追踪 · 一条河的源头</h3>
+            <p>从卫星地图上的一段蓝线出发，逆流而上寻找无人区里那条没有名字的河。</p>
+            <div class="meta"><span>纪录片</span><span>★ 9.3</span><span>地理</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="aerial">
+          <div class="thumb">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#0c1410"/>
+              <circle cx="120" cy="80" r="30" fill="#e8b96a" opacity=".6"/>
+              <path d="M0 150 L80 110 L160 150 L240 104 L320 152 L400 116 L400 250 L0 250Z" fill="#1b2d21"/>
+              <path d="M0 200 L120 170 L260 202 L400 174 L400 250 L0 250Z" fill="#0a110d"/>
+              <path d="M20 220 Q120 200 220 218 T400 214" stroke="#8fd6a4" stroke-width="1" fill="none" opacity=".5"/>
+            </svg>
+            <span class="ep">AIR 05</span><span class="dur">15:18</span>
+          </div>
+          <div class="body">
+            <h3>盐湖之上 · 无人区腹地航拍</h3>
+            <p>当湖面变成镜子，天空被复制了一次。这段航拍没有旁白，只有风与你。</p>
+            <div class="meta"><span>航拍</span><span>★ 9.2</span><span>8K 源</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="people">
+          <div class="thumb">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#111713"/>
+              <circle cx="320" cy="70" r="26" fill="#c9f24d" opacity=".18"/>
+              <path d="M100 250 Q170 170 240 250 Z" fill="#1e3326"/>
+              <path d="M210 250 Q280 180 350 250 Z" fill="#16261c"/>
+              <circle cx="170" cy="140" r="18" fill="#2c4834"/>
+              <circle cx="280" cy="150" r="14" fill="#243d2d"/>
+            </svg>
+            <span class="ep">TALK 08</span><span class="dur">31:44</span>
+          </div>
+          <div class="body">
+            <h3>摄影师之间的深夜对谈</h3>
+            <p>两位常年在无人区工作的摄影师，聊器材、聊体力、也聊那些没能拍到的画面。</p>
+            <div class="meta"><span>人物</span><span>★ 9.1</span><span>对谈</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="live">
+          <div class="thumb">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#0a0f0c"/>
+              <g fill="#1a2c21">
+                <rect x="60" y="170" width="60" height="80"/>
+                <rect x="140" y="150" width="60" height="100"/>
+                <rect x="220" y="180" width="60" height="70"/>
+              </g>
+              <circle cx="250" cy="140" r="18" fill="#8fd6a4" opacity=".7"/>
+              <circle cx="250" cy="140" r="40" fill="#8fd6a4" opacity=".08"/>
+              <g stroke="#c9f24d" stroke-width="1" opacity=".35" fill="none">
+                <path d="M40 130 L140 110 L240 130 L340 106"/>
+              </g>
+            </svg>
+            <span class="ep">LIVE</span><span class="dur">1:12:00</span>
+          </div>
+          <div class="body">
+            <h3>城市放映夜 · 第三现场</h3>
+            <p>我们把荒野的影像搬进城市的小剧场，一场关于远方的现场放映与映后交流。</p>
+            <div class="meta"><span>现场</span><span>★ 9.5</span><span>映后谈</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="doc">
+          <div class="thumb">
+            <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="#0e1511"/>
+              <path d="M0 180 L90 140 L180 176 L270 132 L360 172 L400 154 L400 250 L0 250Z" fill="#20362a"/>
+              <g fill="#cfe6d4">
+                <circle cx="60" cy="60" r="1.4" opacity=".7"/>
+                <circle cx="140" cy="80" r="1" opacity=".5"/>
+                <circle cx="220" cy="54" r="1.4" opacity=".7"/>
+                <circle cx="310" cy="76" r="1" opacity=".5"/>
+                <circle cx="360" cy="120" r="1.2" opacity=".6"/>
+              </g>
+              <path d="M190 190 L210 160 L230 190 Z" fill="#c9f24d" opacity=".35"/>
+            </svg>
+            <span class="ep">EP.06</span><span class="dur">44:26</span>
+          </div>
+          <div class="body">
+            <h3>夜行 · 无人区的另一种白昼</h3>
+            <p>红外与微光设备下的夜间生态，那些白天看不见的脚印，在黑暗里变得清晰。</p>
+            <div class="meta"><span>纪录片</span><span>★ 9.4</span><span>夜视</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 数据 ================= -->
+  <section class="numbers">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="tag">By the Numbers / 影像数据</span>
+        <h2>用可以核对的数字，说明我们走了多远</h2>
+      </div>
+      <div class="num-grid">
+        <div class="num-cell"><strong data-count="186">0</strong><span>荒野战拍摄</span></div>
+        <div class="num-cell"><strong data-count="42">0</strong><span>无人区勘景</span></div>
+        <div class="num-cell"><strong data-count="920" data-suffix="M+">0</strong><span>全平台播放</span></div>
+        <div class="num-cell"><strong data-count="260" data-suffix="K">0</strong><span>社区成员</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 时间线 ================= -->
+  <section class="timeline" id="timeline">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Milestones / 影像历程</span>
+        <h2>国精一二产区无人区的时间刻度</h2>
+        <p>从一支三人小队到今天稳定的制作体系，我们把每一次出发都留在时间线上。</p>
+      </div>
+      <div class="tl">
+        <div class="tl-item">
+          <time>起步阶段</time>
+          <h4>第一次进入无人区</h4>
+          <p>三个人、两台相机、一辆越野车。首次穿越持续了十九天，素材最终剪成十六分钟的影像，成为团队的第一部作品，也定下了之后所有项目的基调：慢一点，再慢一点。</p>
+        </div>
+        <div class="tl-item">
+          <time>体系建设</time>
+          <h4>建立无人区分级勘景制度</h4>
+          <p>我们与地理学者合作，把目标区域按难度、生态敏感度与补给距离分级，形成一套可复用的勘景与应急预案。每一步进入，都要先回答"为什么去"。</p>
+        </div>
+        <div class="tl-item">
+          <time>内容拓展</time>
+          <h4>从长片到声音现场</h4>
+          <p>除了纪录片，团队开始尝试一镜到底航拍与纯现场收音，让不看画面的人也能抵达荒野。影像之外，声音成为第二条叙事通道。</p>
+        </div>
+        <div class="tl-item">
+          <time>社区生长</time>
+          <h4>城市放映计划启动</h4>
+          <p>每部作品完成后，我们会带着它回到城市做免费放映，映后与观众面对面。放映从一场变成十几场，社区成员也从几百人增长到数万人。</p>
+        </div>
+        <div class="tl-item">
+          <time>当下进行时</time>
+          <h4>第七季勘景正在进行</h4>
+          <p>新的季播项目已经进入勘景阶段，团队正在无人区腹地测试新一代轻量化拍摄方案，目标是让设备更小、打扰更少、记录更久。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 创作者 ================= -->
+  <section class="creators" id="creators">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Creators / 创作者网络</span>
+        <h2>把镜头交给更多人</h2>
+        <p>国精一二产区无人区长期开放创作者合作，从拍摄支持到剪辑指导，帮助第一次走进荒野的人完成自己的第一部作品。</p>
+      </div>
+      <div class="creator-grid">
+
+        <div class="creator">
+          <div class="avatar" style="background:linear-gradient(135deg,#c9f24d,#8fd6a4)">林</div>
+          <h4>林野</h4>
+          <span class="role">纪录片导演</span>
+          <p>擅长长镜头与季节叙事，代表作《无人区纪事》系列。</p>
+          <div class="stat"><b>12</b> 部作品 · 6 年野拍</div>
+        </div>
+
+        <div class="creator">
+          <div class="avatar" style="background:linear-gradient(135deg,#8fd6a4,#e8b96a)">周</div>
+          <h4>周屿</h4>
+          <span class="role">航拍摄影</span>
+          <p>专注于极端地貌的航拍测绘与构图，一镜到底爱好者。</p>
+          <div class="stat"><b>380</b> 小时飞行 · 4 个无人区</div>
+        </div>
+
+        <div class="creator">
+          <div class="avatar" style="background:linear-gradient(135deg,#e8b96a,#c9f24d)">陈</div>
+          <h4>陈声</h4>
+          <span class="role">声音设计师</span>
+          <p>现场收音与声场构建，让荒野的声音成为叙事主角。</p>
+          <div class="stat"><b>24</b> 张原声 · 3 次获奖</div>
+        </div>
+
+        <div class="creator">
+          <div class="avatar" style="background:linear-gradient(135deg,#6fa9c9,#8fd6a4)">夏</div>
+          <h4>夏禾</h4>
+          <span class="role">自然观察员</span>
+          <p>负责生态记录与拍摄伦理评估，她的笔记常成为片子的底稿。</p>
+          <div class="stat"><b>900+</b> 条观察笔记</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 社区放映 ================= -->
+  <section class="screenings" id="screenings">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Screenings / 社区放映</span>
+        <h2>下一场，来现场看荒野</h2>
+        <p>所有放映免费预约，名额有限。我们会带着最新作品、声音设备与主创团队，在城市里给你一片荒野。</p>
+      </div>
+      <div class="screen-grid">
+        <div class="screen-list">
+
+          <div class="screen-item">
+            <div class="date"><b>06</b><span>JUN</span></div>
+            <div><h4>无人区纪事 · 风蚀带特别场</h4><p>映后交流：林野 × 夏禾 · 约 120 分钟</p></div>
+            <span class="place">城市剧场</span>
+          </div>
+
+          <div class="screen-item">
+            <div class="date"><b>18</b><span>JUN</span></div>
+            <div><h4>荒野声场 · 沉浸声体验夜</h4><p>八声道现场回放 · 建议提前 15 分钟入场</p></div>
+            <span class="place">声音空间</span>
+          </div>
+
+          <div class="screen-item">
+            <div class="date"><b>02</b><span>JUL</span></div>
+            <div><h4>水系追踪 · 夏季户外放映</h4><p>露天影幕 · 自带坐垫 · 遇雨顺延</p></div>
+            <span class="place">城市公园</span>
+          </div>
+
+          <div class="screen-item">
+            <div class="date"><b>20</b><span>JUL</span></div>
+            <div><h4>创作者开放日 · 带上你的素材</h4><p>现场看片、点评、剪辑室开放体验</p></div>
+            <span class="place">影像基地</span>
+          </div>
+
+        </div>
+        <aside class="side-card">
+          <h4>预约放映名额</h4>
+          <p>留下邮箱，我们会把当月的放映排期、预约方式与入场须知发送给你。不打扰，不刷屏。</p>
+          <form id="subscribeForm" novalidate>
+            <input type="email" id="emailInput" placeholder="你的邮箱地址" autocomplete="email" aria-label="邮箱地址">
+            <button class="btn primary" type="submit" style="width:100%">订阅放映通知</button>
+            <div class="msg" id="formMsg" role="status" aria-live="polite"></div>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="tag">FAQ / 常见问题</span>
+        <h2>你可能想知道的事</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+
+        <div class="faq-item">
+          <button class="faq-q">国精一二产区无人区的作品在哪里可以看？<span class="ico">＋</span></button>
+          <div class="faq-a"><p>官网节目矩阵会同步更新每部作品的上线状态，主要播出渠道包括团队自有平台与合作视频网站。部分长片需要预约后在限时窗口内观看，社区成员会优先收到通知。</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">普通观众可以参与你们的拍摄吗？<span class="ico">＋</span></button>
+          <div class="faq-a"><p>可以，但需要经过基础培训与体能评估。我们每季会开放少量随队名额，主要面向有影像基础、能适应野外作业节奏的创作者。安全永远是第一位的，无人区不适合说走就走。</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">放映活动真的免费吗？<span class="ico">＋</span></button>
+          <div class="faq-a"><p>是的，所有社区放映均免费预约。我们通过作品版权与品牌合作覆盖成本，不向观众收费。预约成功后如无法到场，请提前取消，把名额留给其他人。</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">如何向你们提交自己的荒野影像素材？<span class="ico">＋</span></button>
+          <div class="faq-a"><p>在创作者开放日或通过官网合作入口提交作品简介与片段链接即可。我们更看重观察的耐心和记录的真实性，而不是设备规格。合适的作品会进入共创计划，获得制作与发行支持。</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">拍摄是否会对无人区生态造成影响？<span class="ico">＋</span></button>
+          <div class="faq-a"><p>我们执行最小干扰原则：控制人数与频次、避开繁殖与迁徙敏感期、不遗留任何非自然物品，并与科研人员共同评估拍摄影响。如果评估结论是"不该拍"，项目会被叫停。</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta">
+    <div class="wrap">
+      <h2>把远方带回家，<br>也把好奇带在身上</h2>
+      <p>订阅国精一二产区无人区的放映通知，第一时间收到新片上线、勘景手记与社区活动信息。</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#screenings">预约下一场放映 →</a>
+        <a class="btn ghost" href="#shows">先看一部作品</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <span class="dot"></span>
+          <span>国精一二产区无人区<small>WILDERNESS PICTURES</small></span>
+        </a>
+        <p>专注荒野与极境影像记录的独立视频品牌。用可持续的方式拍摄不被打扰的风景，把无人区的故事带回人群。</p>
+      </div>
+      <div class="foot-col">
+        <h5>内容</h5>
+        <a href="#shows">节目矩阵</a>
+        <a href="#timeline">影像历程</a>
+        <a href="#creators">创作者</a>
+        <a href="#screenings">社区放映</a>
+      </div>
+      <div class="foot-col">
+        <h5>关于</h5>
+        <a href="#about">品牌主张</a>
+        <a href="#faq">常见问题</a>
+        <a href="#screenings">合作联系</a>
+        <a href="#top">返回顶部</a>
+      </div>
+      <div class="foot-col">
+        <h5>关注</h5>
+        <div class="socials">
+          <a href="#screenings" aria-label="视频平台">V</a>
+          <a href="#screenings" aria-label="社区">C</a>
+          <a href="#screenings" aria-label="播客">P</a>
+          <a href="#screenings" aria-label="邮件">M</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2025</span> 国精一二产区无人区 · 保留所有权利</span>
+      <span>荒野拍摄 · 尊重为先 · 最小干扰原则</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 年份 */
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  /* 移动端菜单 */
+  var toggle = document.getElementById('menuToggle');
+  var links = document.getElementById('navLinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', function(){
+      links.classList.toggle('open');
+    });
+    links.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') links.classList.remove('open');
+    });
+  }
+
+  /* 节目筛选 */
+  var filters = document.getElementById('filters');
+  var grid = document.getElementById('showGrid');
+  if (filters && grid) {
+    filters.addEventListener('click', function(e){
+      var btn = e.target.closest('button');
+      if (!btn) return;
+      var f = btn.getAttribute('data-filter');
+      Array.prototype.forEach.call(filters.querySelectorAll('button'), function(b){
+        b.classList.toggle('on', b === btn);
+      });
+      Array.prototype.forEach.call(grid.querySelectorAll('.card'), function(card){
+        var cat = card.getAttribute('data-cat');
+        var show = (f === 'all' || cat === f);
+        card.classList.toggle('hidden', !show);
+        if (show) {
+          card.style.animation = 'none';
+          void card.offsetWidth;
+          card.style.animation = 'fadeUp .45s ease both';
+        }
+      });
+    });
+  }
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-count]');
+  var counterDone = false;
+  function animateCounters(){
+    if (counterDone) return;
+    counterDone = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      var start = 0, dur = 1400, t0 = null;
+      function step(ts){
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = Math.round(start + (target - start) * eased);
+        el.textContent = val + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var numSection = document.querySelector('.numbers');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { animateCounters(); io.disconnect(); }
+      });
+    }, {threshold: .3});
+    if (numSection) io.observe(numSection);
+  } else {
+    animateCounters();
+  }
+
+  /* FAQ 手风琴 */
+  var faqList = document.getElementById('faqList');
+  if (faqList) {
+    faqList.addEventListener('click', function(e){
+      var q = e.target.closest('.faq-q');
+      if (!q) return;
+      var item = q.parentElement;
+      var wasOpen = item.classList.contains('open');
+      Array.prototype.forEach.call(faqList.querySelectorAll('.faq-item'), function(it){
+        it.classList.remove('open');
+        var ico = it.querySelector('.ico');
+        if (ico) ico.textContent = '＋';
+      });
+      if (!wasOpen) {
+        item.classList.add('open');
+        var ico2 = item.querySelector('.ico');
+        if (ico2) ico2.textContent = '＋';
+      }
+    });
+  }
+
+  /* 订阅表单 */
+  var form = document.getElementById('subscribeForm');
+  var input = document.getElementById('emailInput');
+  var msg = document.getElementById('formMsg');
+  if (form && input && msg) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var v = (input.value || '').trim();
+      var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      if (!ok) {
+        msg.style.color = '#ff8a8a';
+        msg.textContent = '请输入有效的邮箱地址。';
+        input.focus();
+        return;
+      }
+      msg.style.color = '';
+      msg.textContent = '已记录你的邮箱，下一场放映通知会发送给你。';
+      input.value = '';
+    });
+  }
+
+  /* 卡片进入动画（通过插入 keyframes） */
+  var style = document.createElement('style');
+  style.textContent = '@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}';
+  document.head.appendChild(style);
+
+  /* 平滑滚动兜底（针对旧浏览器） */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if (id.length > 1) {
+        var el = document.querySelector(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({behavior: 'smooth', block: 'start'});
+        }
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+            </html>
